@@ -1,0 +1,273 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+
+/*na ftiaksw to ultrawide support dld meta ta 1600 width me @media querry*/
+* {
+    box-sizing: border-box;
+    --hello-font-size: 7rem;
+    --hello-font-m:4rem;
+    --hello-font-s: 3rem;
+
+}
+
+:root {
+    --primary-color: #24252A;
+    --secondary-color: white;
+}
+
+.white-theme{
+    --primary-color:white ;
+    --secondary-color: #121212;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color:aqua;
+}
+
+#logosvg{
+    height: 50px;
+    width: 150px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--secondary-color);
+    padding: 15px 10%;
+    margin: auto;
+}
+
+.logo {
+    margin: .5rem;
+    cursor: pointer;
+
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;  
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 1rem;
+    display: block;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 2.3rem;
+    left: 5%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 2.25rem;
+    right: 5%;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 25px;
+    
+}
+
+#themeIcon{
+    position: inherit;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    
+}
+
+.home-container{
+    display: flex;
+    justify-content: space-between;  
+    background-color: var(--secondary-color);
+    height:89.5vh;
+
+    border: 3px solid green ;
+}
+
+.heading-box{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    border: 3px solid violet;
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+    
+}
+
+.main-heading{
+    font-family: "Montserrat", sans-serif;
+    color:var(--primary-color);
+    font-size: var(--hello-font-size);
+    margin: auto;
+    margin-left: 10%;
+    text-align: left;
+    border: 3px solid black;
+    height: fit-content;
+    margin-top:10%
+    
+
+}
+.main-paragraph{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    color:var(--primary-color);
+    font-weight: 400;
+    border: 3px solid red;
+    margin-left:11.25%;
+}
+
+
+.main-image{
+    margin-right:5%;
+    display: flex;
+    border: 3px solid blue;
+    width: (100vw)/2;
+    height: fit-content;
+    align-self: center;
+}
+
+#mainimage{
+    padding: 10%;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 100%;
+    width:  100%;
+    align-items: center;
+    
+}
+
+.about-me-container{
+    background-color: floralwhite;
+    width: 100hw;
+    height: 100vh;
+}
+
+
+
+@media(max-width: 1100px) {
+    .main-heading{
+        font-size: var(--hello-font-m);
+    }
+}
+
+/*  Mobile/Resposive optimization */
+
+@media(max-width: 650px) {
+    .toggle-button {
+        display: flex;
+    }
+    
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+        border: solid 1px #3c3d41;
+        border-radius: 15px;
+        margin-bottom:3%;
+    }
+   
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    } 
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .theme-toggle{
+        right:5%;
+    }
+
+    #themeIcon{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: center;
+    }
+
+    .home-container{
+        flex-wrap: wrap;
+        position: relative;
+        margin:0;
+        height:100%;
+    }
+
+    .heading-box{
+        width:100%;
+        margin:0;
+        align-items: center;
+    }
+
+    .main-heading{
+        font-size: var( --hello-font-s);
+        margin:5%;
+        margin-top: 10%;
+        text-align: center;
+    }
+
+    .main-paragraph {
+        margin:5%;
+        margin-top:2%;
+        text-align: center;
+    }
+
+    .main-image{
+        width:100%;
+        margin:auto;
+        padding: 10%;
+    }
+
+    #mainimage{
+        margin:0;
+        padding: 0;
+    }
+}
