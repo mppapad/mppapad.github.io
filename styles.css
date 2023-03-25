@@ -114,14 +114,14 @@ body {
     background-color: var(--secondary-color);
     height:89.5vh;
 
-    border: 3px solid green ;
+   /* border: 3px solid green ;*/
 }
 
 .heading-box{
     display: flex;
     flex-direction: column;
     margin-left: 5%;
-    border: 3px solid violet;
+  /*  border: 3px solid violet;*/
     width: fit-content;
     height: fit-content;
     align-self: center;
@@ -135,7 +135,7 @@ body {
     margin: auto;
     margin-left: 10%;
     text-align: left;
-    border: 3px solid black;
+  /*  border: 3px solid black;*/
     height: fit-content;
     margin-top:10%
     
@@ -148,7 +148,7 @@ body {
     font-family: "Montserrat", sans-serif;
     color:var(--primary-color);
     font-weight: 400;
-    border: 3px solid red;
+   /* border: 3px solid red;*/
     margin-left:11.25%;
 }
 
@@ -156,7 +156,7 @@ body {
 .main-image{
     margin-right:5%;
     display: flex;
-    border: 3px solid blue;
+  /*  border: 3px solid blue;*/
     width: (100vw)/2;
     height: fit-content;
     align-self: center;
@@ -191,6 +191,9 @@ body {
 @media(max-width: 650px) {
     .toggle-button {
         display: flex;
+    }
+    #logosvg{
+        align-items: center;
     }
     
     .navbar-links{
