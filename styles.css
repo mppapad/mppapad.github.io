@@ -112,7 +112,7 @@ body {
     display: flex;
     justify-content: space-between;  
     background-color: var(--secondary-color);
-    height:89.5vh;
+    height:100vh;
 
    /* border: 3px solid green ;*/
 }
@@ -192,8 +192,12 @@ body {
     .toggle-button {
         display: flex;
     }
+   
     #logosvg{
         align-items: center;
+        margin: 0;
+        padding: 0;
+
     }
     
     .navbar-links{
