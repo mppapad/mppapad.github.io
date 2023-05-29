@@ -12,10 +12,10 @@ icon.onclick = function() {
     document.body.classList.toggle("white-theme");
     if( document.body.classList.contains("white-theme")) {
         themeIcon.src = "images/moon.png";
-        logosvg.src = "images/text324.svg";
+        logosvg.src = "images/MppapadLogo-dark.svg";
     }
     else {
         themeIcon.src = "images/sun.png";
-        logosvg.src = "images/text325.svg";
+        logosvg.src = "images/MppapadLogo-Light.svg";
     }
 }
