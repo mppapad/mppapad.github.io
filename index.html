@@ -4,17 +4,22 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Mppapad's porfolio</title>
+        <title>Mppapad</title>
         <meta name="description" content="Miltiadis's porfolio">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon"stype="image/x-icon" href="images/Favicon-logo.ico">
+        <link rel="icon"stype="image/x-icon" href="images/fav-mppapad.ico">
         <link rel="stylesheet" href="styles.css"> 
         <script src="script.js" defer></script>
     </head>
     <body>
+
+        <div id="loaderdiv" class="loader-wrapper">
+            <span class="bar-loader"></span>
+            <span class="bar-loader"></span>
+            <span class="bar-loader"></span>
+        </div>
     
         <nav class="navbar">
-            <!--<div class="logo">MP<span>PAPAD</span></div>-->
             <div class="logo">
                 <img id="logosvg" src="images/MppapadLogo-Light.svg" alt="Mppapad main site logo">
             </div>
@@ -29,18 +34,17 @@
                     <li><a href="#">About me</a></li>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">Contact me</a></li>
+                    <label class="switch">
+                        <input id="switch" type="checkbox">
+                        <span class="slider"></span>
+                    </label>
                 </ul> 
-                
-            </div>
-            <div class="theme-toggle">
-                <img id="themeIcon" src="images/sun.png" alt="Dark mode toggle">
                 
             </div>
         </nav>
 
         <div class="home-container">
             <div class="heading-box">
-                <!--<h1 class="main-heading">Hi i'm Miltiadis</h1>-->
                 <h1 class="main-heading">Hi i'm Miltiadis</h1>
                 <h2 class="main-paragraph">
                     A full-stack Developer!

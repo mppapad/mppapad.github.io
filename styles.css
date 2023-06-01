@@ -26,11 +26,136 @@ body {
     background-color:aqua;
 }
 
+
+/*theme toggle*/
+/* The switch - the box around the slider */
+.switch {
+  font-size: 15px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+  top:12px;
+  left:30px;
+
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  --background: var(--secondary-color);
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: .5s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px var(--primary-color);
+  background: var(--background);
+  transition: .5s;
+}
+
+input:checked + .slider {
+  background-color: var(--secondary-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px var(--primary-color);
+}
+/*end of theme toggle*/
+
+/*Preloader style*/
+
+.loader-wrapper {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    z-index: 99999;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-hidden{
+    animation: vanish 2s forwards;
+    visibility: 0;
+}
+
+@keyframes vanish {
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }   
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+}
+
+.bar-loader {
+    display: inline-block;
+    width: 3px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    animation: scale-up4 1s linear infinite;
+  }
+  
+.bar-loader:nth-child(2) {
+    height: 35px;
+    margin: 0 5px;
+    animation-delay: .25s;
+}
+  
+.bar-loader:nth-child(3) {
+    animation-delay: .5s;
+}
+
+@keyframes scale-up4 {
+    20% {
+      background-color: #ffff;
+      transform: scaleY(1.5);
+    }
+  
+    40% {
+      transform: scaleY(1);
+    }
+  }
+
+/*End of Preloader style*/
+
 #logosvg{
     height: 50px;
     width: 150px;
 }
+
 .navbar {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,6 +163,7 @@ body {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
+
     color: var(--secondary-color);
     padding: 15px 10%;
     margin: auto;
@@ -112,7 +238,7 @@ body {
     display: flex;
     justify-content: space-between;  
     background-color: var(--secondary-color);
-    height:100vh;
+    height:86.5vh;
 
    /* border: 3px solid green ;*/
 }
@@ -186,9 +312,19 @@ body {
     }
 }
 
-/*  Mobile/Resposive optimization */
+/* Resposive optimization */
 
 @media(max-width: 650px) {
+    .loader-wrapper {
+        position: none;
+    }
+    
+    .switch {
+        top: 0px;
+        left: 0px;
+        margin: auto;
+    }
+
     .toggle-button {
         display: flex;
     }
@@ -197,7 +333,6 @@ body {
         align-items: center;
         margin: 0;
         padding: 0;
-
     }
     
     .navbar-links{
